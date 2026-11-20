@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-shell-permission-compat/pwsh",
+    "description": "直接放行已被当前沙箱满足的 pwsh sandbox_permissions（含 read-only），仅在实际提权时触发审批。"
+  }
+}

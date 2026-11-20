@@ -1,0 +1,49 @@
+{
+  "name": "@kabxx/dsh-shell-permission-compat",
+  "version": "0.1.0",
+  "description": "Accept Bash and PowerShell permission requests already satisfied by the active DeepSeek Harness sandbox.",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabxx/dsh-shell-permission-compat.git"
+  },
+  "exports": {
+    "./bash": "./src/bash.js",
+    "./pwsh": "./src/pwsh.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./bash/locale/*.json": "./locale/bash/*.json",
+    "./bash/icon": "./icon.svg",
+    "./pwsh/locale/*.json": "./locale/pwsh/*.json",
+    "./pwsh/icon": "./icon.svg"
+  },
+  "files": [
+    "src/",
+    "cordis.patch.yml",
+    "locale/",
+    "icon.svg"
+  ],
+  "scripts": {
+    "check": "node --check src/bash.js && node --check src/pwsh.js && node --check src/permission.js",
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent-preset": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-tool-bash": "0.2.2-rc.5",
+    "@deepseek-ai/dsh-tool-pwsh": "0.2.2-rc.5"
+  },
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": "0.2.2-rc.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

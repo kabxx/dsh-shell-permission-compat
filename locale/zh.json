@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-shell-permission-compat",
+    "description": "扩展内置预设中的 bash 与 pwsh 工具，直接放行已被当前沙箱满足的 sandbox_permissions（含 read-only），仅在实际提权时触发审批。"
+  }
+}

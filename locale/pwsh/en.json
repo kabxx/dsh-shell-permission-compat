@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-shell-permission-compat/pwsh",
+    "description": "Accept pwsh sandbox_permissions values (including read-only) already satisfied by the active sandbox, prompting only for wider access."
+  }
+}
